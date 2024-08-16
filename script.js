@@ -2,7 +2,7 @@ const CaixaPrincipal = document.querySelector ('caixa-principal');
 const CaixaPerguntas = document.querySelector ('caixa-perguntas');
 const CaixaAlternativas = document.querySelector ('caixa-alternativas');
 const CaixaResultado = document.querySelector ('caixa-resultado');
-const CaixaResultado = document.querySelector ('caixa-resultado');
+const CaixaResultado = document.querySelector ('texto-resultado');
 
 const perguntas = [
     {
@@ -51,7 +51,7 @@ let atual = 0;
 let perguntasAtual;
 
 function mostraAlternativa (){
-    perguntasAtual = perguntas [atual];
+    perguntasAtual = perguntas[atual];
     CaixaPerguntas.textContent = perguntasAtual.enunciado;
 }
 
