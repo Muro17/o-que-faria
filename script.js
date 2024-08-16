@@ -6,7 +6,7 @@ const CaixaResultado = document.querySelector ('caixa-resultado');
 
 const perguntas = [
     {
-        enunciado: "No ambito social, vc prefere:"
+        enunciado: "No ambito social, vc prefere:",
         alternativas: [
             {
                 texto:"alternativas 1",
@@ -19,7 +19,7 @@ const perguntas = [
         ]
     },
     {
-        enunciado: "No ambito ambiental, vc prefere:"
+        enunciado: "No ambito ambiental, vc prefere:",
         alternativas: [
             {
                 texto:"alternativas 1",
@@ -32,7 +32,7 @@ const perguntas = [
         ]
     },
     {
-        enunciado: "No ambito tecnologico, vc prefere:"
+        enunciado: "No ambito tecnologico, vc prefere:",
         alternativas: [
             {
                 texto:"alternativas 1",
