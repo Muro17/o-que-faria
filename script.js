@@ -4,5 +4,48 @@ const CaixaAlternativas = document.querySelector ('caixa-alternativas');
 const CaixaResultado = document.querySelector ('caixa-resultado');
 const CaixaResultado = document.querySelector ('caixa-resultado');
 
+const perguntas = [
+    {
+        enunciado: "No ambito social, vc prefere:"
+        alternativas: [
+            {
+                texto:"alternativas 1",
+                afirmaçao: "afirmaçao",
+            }, 
+            {
+                texto: "alternativa 2",
+                afirmaçao: "afirmaçao",
+            },
+        ]
+    },
+    {
+        enunciado: "No ambito ambiental, vc prefere:"
+        alternativas: [
+            {
+                texto:"alternativas 1",
+                afirmaçao: "afirmaçao",
+            }, 
+            {
+                texto: "alternativa 2",
+                afirmaçao: "afirmaçao",
+            },
+        ]
+    },
+    {
+        enunciado: "No ambito tecnologico, vc prefere:"
+        alternativas: [
+            {
+                texto:"alternativas 1",
+                afirmaçao: "afirmaçao",
+            }, 
+            {
+                texto: "alternativa 2",
+                afirmaçao: "afirmaçao",
+            },
+        ]
+    },
+]
+
+
 let atual = 0;
-let perguntasAtual
+let perguntasAtual;
