@@ -55,4 +55,4 @@ function mostraAlternativa (){
     CaixaPerguntas.textContent = perguntasAtual.enunciado;
 }
 
-mostraPergunta();
+mostraAlternativa();
