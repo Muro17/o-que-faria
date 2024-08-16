@@ -49,16 +49,20 @@ const perguntas = [
 
 let atual = 0;
 let perguntasAtual;
-
-function mostraAlternativa (){
-    for (const pergunta of perguntasAtual.alternativas){
-        const botaoAlternativa = document.createrElement('button');
-        botaoAlternativa.textContent = pergunta;
-        CaixaAlternativas.appendChild(botaoAlternativa);
-    }
+    
+    function mostraPergunta () {
     perguntasAtual = perguntas[atual];
     CaixaPerguntas.textContent = perguntasAtual.enunciado;
     CaixaAlternativas.textContent="";
+    mostraAlternativa();}
+   
+    function mostraAlternativa (){
+        for (const pergunta of perguntasAtual.alternativas){
+            const botaoAlternativa = document.createrElement('button');
+            botaoAlternativa.textContent = pergunta;
+            CaixaAlternativas.appendChild(botaoAlternativa);
+            mostraAlternativa();
+        }
 }
 
-mostraAlternativa();
+mostraPergunta();
