@@ -137,7 +137,81 @@ function mostraAlternativa () {
     }
 
 }
+let atual = 0;
 
+let perguntaAtual;
+
+let historiaFinal = "";
+
+
+
+function mostraPergunta() {
+
+    if(atual >= perguntas.length){
+
+        mostraResultado();
+
+        return;
+
+    }
+
+    perguntaAtual = perguntas[atual];
+
+    caixaPerguntas.textContent = perguntaAtual.enunciado;
+
+    caixaAlternativas.textContent = "";
+
+    mostraAlternativa();
+
+}
+
+
+
+function mostraAlternativa() {
+
+    for (const pergunta of perguntaAtual.alternativas) {
+
+        const botaoAlternativa = document.createElement('button');
+
+        botaoAlternativa.textContent = pergunta.texto;
+
+        botaoAlternativa.addEventListener("click", () => respostaSelecionada(pergunta));
+
+        caixaAlternativas.appendChild(botaoAlternativa);
+
+    }
+
+}
+
+
+
+function respostaSelecionada(pergunta) {
+
+    const afirmacoes = pergunta.afirmacao;
+
+    historiaFinal += afirmacoes +" ";
+
+    atual++;
+
+    mostraPergunta();
+
+}
+
+
+
+function mostraResultado(){
+
+    caixaPerguntas.textContent = "Em resumo, você escolheu... ";
+
+    textoResultado.textContent = historiaFinal;
+
+    caixaAlternativas.textContent = " ";
+
+}
+
+
+
+mostraPergunta();
 
 
 mostraPergunta();
