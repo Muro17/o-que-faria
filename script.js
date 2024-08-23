@@ -213,5 +213,3 @@ function mostraResultado(){
 
 mostraPergunta();
 
-
-mostraPergunta();
